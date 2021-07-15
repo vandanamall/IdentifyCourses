@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Chrome Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Chrome Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 15 16:57:09 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>223 seconds (223353 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>Smoke Testing Regression Testing Testing </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.TestCases.testEight()'><b>testEight</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>20</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testFive()'><b>testFive</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>7</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testTen()'><b>testTen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>4</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testEighteen()'><b>testEighteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>26</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testNine()'><b>testNine</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>2</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testTwo()'><b>testTwo</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>3</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testFourteen()'><b>testFourteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>10</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testEleven()'><b>testEleven</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>7</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testFiveteen()'><b>testFiveteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>5</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testThirteen()'><b>testThirteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>12</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testSix()'><b>testSix</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>14</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testNineteen()'><b>testNineteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>16</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testThree()'><b>testThree</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>7</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testSixteen()'><b>testSixteen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>9</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testSeventeen()'><b>testSeventeen</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>20</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testOne()'><b>testOne</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>5</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testSeven()'><b>testSeven</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>12</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testTwenty()'><b>testTwenty</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>17</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testFour()'><b>testFour</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>6</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+<tr>
+<td title='com.test.TestCases.testTwelve()'><b>testTwelve</b><br>Test class: com.test.TestCases<br>Parameters: chrome</td>
+<td></td>
+<td>10</td>
+<td>com.test.TestCases@2898ac89</td></tr>
+</table><p>
+</body>
+</html>

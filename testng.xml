@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="2">
+	<test name="Chrome Test">
+		<parameter name="browser" value="chrome" />
+		<groups>
+			<run>
+				<include name="Testing" />
+				<include name="Smoke Testing" />
+				<include name="Regression Testing" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.TestCases" />
+		</classes>
+	</test>
+	<test name="Internet Explorer Test">
+
+		<parameter name="browser" value="IE" />
+		<groups>
+			<run>
+				<include name="Testing" />
+				<include name="Smoke Testing" />
+				<include name="Regression Testing" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.TestCases" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
