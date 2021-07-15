@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +27,7 @@ public class TestCases extends BaseUI {
 		prop = readProperties();
 		driver = invokeBrowser(browser);
 		openURL(prop.getProperty("url"), driver);
-		
+
 	}
 
 	@Parameters({ "browser" })
@@ -38,7 +37,6 @@ public class TestCases extends BaseUI {
 		prop = readProperties();
 		openURL(prop.getProperty("url"), driver);
 		getElement("search_Css", driver);
-		
 
 	}
 
@@ -62,7 +60,6 @@ public class TestCases extends BaseUI {
 		waitImplicit(driver);
 		sendKeys(prop.getProperty("searchtextbox_Xpath"), prop.getProperty("text"), driver);
 		click("suggestion_Xpath", driver);
-	
 
 	}
 
@@ -84,7 +81,6 @@ public class TestCases extends BaseUI {
 		String pageTitle = driver.getTitle();
 		// check point to validate the browser title
 		verify(pageTitle, prop.getProperty("pagevalidationsearch"), driver);
-	
 
 	}
 
@@ -132,29 +128,9 @@ public class TestCases extends BaseUI {
 		logger = report.createTest("testNine");
 		prop = readProperties();
 		openURL(prop.getProperty("url"), driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		WebElement categories = getElement("categories_Xpath", driver);
-		Actions actions = new Actions(driver);
+		LearningLanguage l = new LearningLanguage(driver, prop);
+		l.learningLanguage();
 
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", categories);
-		waitImplicit(driver);
-
-		actions.moveToElement(wait.until(ExpectedConditions.visibilityOf(categories))).build().perform();
-
-		actions.moveToElement(categories).build().perform();
-
-		wait.until(ExpectedConditions.visibilityOf(getElement("Teaching&Academics_Xpath", driver)));
-
-		WebElement teaching = getElement("Teaching&Academics_Xpath", driver);
-		actions.moveToElement(teaching).build().perform();
-
-		wait.until(ExpectedConditions.visibilityOf(getElement("LanguageLearning_Xpath", driver)));
-
-		WebElement Learning = getElement("LanguageLearning_Xpath", driver);
-		actions.moveToElement(Learning).build().perform();
-		
 	}
 
 	@Parameters({ "browser" })
@@ -163,34 +139,13 @@ public class TestCases extends BaseUI {
 		logger = report.createTest("testTen");
 		prop = readProperties();
 		openURL(prop.getProperty("url"), driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		WebElement categories = getElement("categories_Xpath", driver);
-		Actions actions = new Actions(driver);
-
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", categories);
-		waitImplicit(driver);
-
-		actions.moveToElement(wait.until(ExpectedConditions.visibilityOf(categories))).build().perform();
-
-		actions.moveToElement(categories).build().perform();
-
-		wait.until(ExpectedConditions.visibilityOf(getElement("Teaching&Academics_Xpath", driver)));
-
-		WebElement teaching = getElement("Teaching&Academics_Xpath", driver);
-		actions.moveToElement(teaching).build().perform();
-
-		wait.until(ExpectedConditions.visibilityOf(getElement("LanguageLearning_Xpath", driver)));
-
-		WebElement Learning = getElement("LanguageLearning_Xpath", driver);
-		actions.moveToElement(Learning).build().perform();
-
+		LearningLanguage l = new LearningLanguage(driver, prop);
+		l.learningLanguage();
 		// Total count of language
 		java.util.List<WebElement> allLanguagesText = driver
 				.findElements(By.xpath(prop.getProperty("TotalLanguage_Xpath")));
 		System.out.println("Total Number of languages are " + allLanguagesText.size());
-	
+
 	}
 
 	@Parameters({ "browser" })
@@ -201,6 +156,7 @@ public class TestCases extends BaseUI {
 		openURL(prop.getProperty("url"), driver);
 		LearningLanguage l = new LearningLanguage(driver, prop);
 		l.learningLanguage();
+		l.count();
 	}
 
 	@Parameters({ "browser" })
@@ -211,6 +167,7 @@ public class TestCases extends BaseUI {
 		openURL(prop.getProperty("url"), driver);
 		LearningLanguage l = new LearningLanguage(driver, prop);
 		l.learningLanguage();
+		l.count();
 		Actions actions = new Actions(driver);
 
 		WebElement Learning = getElement("LanguageLearning_Xpath", driver);
@@ -227,6 +184,7 @@ public class TestCases extends BaseUI {
 		openURL(prop.getProperty("url"), driver);
 		LearningLanguage l = new LearningLanguage(driver, prop);
 		l.learningLanguage();
+		l.count();
 		Actions actions = new Actions(driver);
 
 		WebElement Learning = getElement("LanguageLearning_Xpath", driver);
@@ -237,7 +195,7 @@ public class TestCases extends BaseUI {
 		WebElement allLevels = getElement("AllLevels_Xpath", driver);
 		java.util.List<WebElement> allLevelsText = allLevels.findElements(By.tagName("label"));
 		System.out.println("Total levels are " + allLevelsText.size());
-		
+
 	}
 
 	@Parameters({ "browser" })
@@ -296,7 +254,7 @@ public class TestCases extends BaseUI {
 		String pageTitle = driver.getTitle();
 		// check point to validate the browser title
 		verify(pageTitle, prop.getProperty("buisnesspagetitle"), driver);
-	
+
 	}
 
 	@Parameters({ "browser" })

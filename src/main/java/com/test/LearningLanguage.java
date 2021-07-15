@@ -35,20 +35,20 @@ public class LearningLanguage extends BaseUI {
 		Thread.sleep(5000);
 
 		actions.moveToElement(wait.until(ExpectedConditions.visibilityOf(categories))).build().perform();
-
 		actions.moveToElement(categories).build().perform();
 
 		wait.until(ExpectedConditions.visibilityOf(getElement("Teaching&Academics_Xpath", driver)));
-
 		WebElement teaching = getElement("Teaching&Academics_Xpath", driver);
 		actions.moveToElement(teaching).build().perform();
 
 		wait.until(ExpectedConditions.visibilityOf(getElement("LanguageLearning_Xpath", driver)));
-
 		WebElement Learning = getElement("LanguageLearning_Xpath", driver);
 		actions.moveToElement(Learning).build().perform();
+		Thread.sleep(2000);
+	}
 
-		// Total count of language
+	// Total count of language
+	public void count() {
 		java.util.List<WebElement> allLanguagesText = driver
 				.findElements(By.xpath(config.getProperty("TotalLanguage_Xpath")));
 		System.out.println("Total Number of languages are " + allLanguagesText.size());
